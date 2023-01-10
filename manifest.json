@@ -3,7 +3,7 @@
     "name": "Tomato Timer",
     "description": "Cette extension de navigateur permet une gestion du temps de travail basée sur la méthode Pomodoro.",
     "version": "1.0",
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab","tabs","clipboardRead","clipboardWrite"],
     "background": {
       "service_worker": "script.js"
     }
