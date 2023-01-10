@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tomato Timer</title>
+    <title>Tomato timer</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #tomatoImage {
+        width: 100px;
+        margin: 50px;
+      }
+
+      button {
+        margin: 5px;
+        outline: none;
+        padding: 2px;
+      }
+
+      button:hover {
+        background-color: rgb(0, 201, 77);
+      }
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files
+     -->
   </head>
   <body>
-    <img src="./img/tomato.png" id="tomatoImage" />
-    <button id="min25" value="25">25 Minutes</button>
-    <script src="script.js"></script>
+      <img src='/img/tomato.png' id='tomatoImage'>
+      <button id="sampleMinute" value="1">Sample minute</button>
+      <button id="auTravail" value="25">Au travail !</button>
+   <script src="popup.js"></script>
   </body>
 </html>
