@@ -1,19 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "Tomato Timer",
-    "description": "Cette extension de navigateur permet une gestion du temps de travail basée sur la méthode Pomodoro.",
-    "version": "1.0",
-    "permissions": ["activeTab","tabs","clipboardRead","clipboardWrite"],
-    "background": {
-      "service_worker": "script.js"
-    },
-    "action": {
-      "default_title": "Drink Water Event",
-      "default_popup": "popup.html"
-    },
-    "icons": {
-      "16": "/img/tomato.png"
-    }
-  }
-  
-  
+  "name": "Tomato Timer",
+  "description": "Cette extension de navigateur permet une gestion du temps de travail basée sur la méthode Pomodoro.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "It's time !",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "/img/tomato.png"
+  },
+  "content_scripts" : [
+  { 
+    "matches" : ["<all_urls>"],
+    "js" : []
+  }]
+}
