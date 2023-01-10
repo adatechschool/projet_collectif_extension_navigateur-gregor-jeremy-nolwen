@@ -13,6 +13,7 @@ function setBreakAlarm(n){
 
 chrome.alarms.onAlarm.addListener(function(alarm){
   if(alarm.name === "break"){
+    compteurSessions += 1
     chrome.action.setBadgeText({ text: '' });
     chrome.notifications.create({
       type: 'basic',
@@ -21,7 +22,12 @@ chrome.alarms.onAlarm.addListener(function(alarm){
       message: "C'est l'heure de la pause!",
       priority: 0,
     });
-    setBreakAlarm(1)
+    if (compteurSessions==4){
+      compteurSessions = 0
+      setBreakAlarm(2) // à changer pour 30
+    }else{
+      setBreakAlarm(1) // à changer pour 5
+    }
   }else if(alarm.name === "work"){
     chrome.action.setBadgeText({ text: '' });
     chrome.notifications.create({
@@ -34,4 +40,3 @@ chrome.alarms.onAlarm.addListener(function(alarm){
   }
 }); 
   
-
