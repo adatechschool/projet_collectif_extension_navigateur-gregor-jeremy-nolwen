@@ -17,10 +17,5 @@
   },
   "icons": {
     "16": "/img/tomato.png"
-  },
-  "content_scripts" : [
-  { 
-    "matches" : ["<all_urls>"],
-    "js" : []
-  }]
+  }
 }

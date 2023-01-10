@@ -4,6 +4,13 @@
 ## extension de navigateur de gestion de temps de travail basée sur la méthode Pomodoro.
 #### V1 : Gestion des périodes de temps + Animations pauses
 
+/* ,
+  "content_scripts" : [
+  { 
+    "matches" : ["<all_urls>"],
+    "js" : []
+  }] */
+
 let timeBeforeBigBreak = 0 ;
 function timer(temps){ //  get worktime(change to 25) value by listenening event in html // get break time end of the funvtion
     const smallBreakTime = 1 ; // change to 5 at end of testing
