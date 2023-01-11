@@ -1,12 +1,14 @@
 {
   "name": "Tomato Timer",
+  "authors" : "Jeremy Zinger, Gregor XXX, Nolwen Major Francès",
   "description": "Cette extension de navigateur permet une gestion du temps de travail basée sur la méthode Pomodoro.",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [
     "alarms",
     "notifications",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "background": {
     "service_worker": "background.js"
