@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tomato timer</title>
-    <style>
+  <link rel="stylesheet" href="links.css">
+  <style>
       body {
         text-align: center;
         border-radius: 10px
@@ -14,17 +15,6 @@
       #tomatoImage {
         width: 100px;
         margin: 50px;
-      }
-
-      #definition {
-        color: black;
-        text-decoration: none;
-        font-style: italic;
-      }
-
-      #definition:hover {
-        color: grey;
-        cursor: pointer;
       }
 
       button {
@@ -38,62 +28,28 @@
 
       button:active { 
         border : none ;
-        outline: none }
+        outline: none 
+      }
 
       button:hover {
         background-color: rgb(172, 255, 113);
         cursor: pointer;
       }
-
-      #aideNotifications {
-        text-decoration: none;
-        font-style: italic;
-        font-size: smaller;
-      }
-
-      #aideNotifications:hover {
-      color: grey;
-      cursor: pointer;
-     }
-
-      p#tooltipTextHour {
-        display: none; 
-      }
-
-/*       p#tooltipTextHour {
-        display: none; 
-        position: absolute;
-        top: 200px ;
-        z-index: 1;
-        background: #ffffff;
-        padding: 10px; 
-        font-size: small ;
-        border-radius: 5px;
-        animation: fadeIn 0.6s;
-        background-color: rgb(185, 185, 185);
-      }
-
-      p#tooltipTextHour:before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -8px;
-        border: 8px solid transparent;
-      }        */
-    </style>
-  </head>
-  <body>
+  </style>
+</head>
+<body>
       <a id="definition" target="_blank" href="https://fr.wikipedia.org/wiki/Technique_Pomodoro"> Qu'est ce que la methode Pomodoro ?</a>
       <img src='/img/tomato.png' id='tomatoImage'>     
       <button id="auTravail" value="1">Au travail !</button> <!-- changer pour 25 à la fin des tests -->
-      <div id=tooltipDivHour>
+      <div id=tooltipDiv>
         <p id="aideNotifications"> Je n'ai pas de notifications</p>
-        <p id="tooltipTextHour"> Cela peut venir de tes 
+        <p id="tooltipText"> Cela peut venir de tes 
           <a target= "_blank" href= "https://support.google.com/chrome/answer/3220216?hl=fr&co=GENIE.Platform%3DDesktop">paramètres chrome</a>
-           ou des 
-           <a target= "_blank" href="https://support.microsoft.com/fr-fr/windows/modifier-les-param%C3%A8tres-de-notification-et-de-notification-rapide-dans-windows-ddcbbcd4-0a02-f6e4-fe14-6766d850f294">paramètres de ton ordinateur</a></p>
+           ou des paramètres de ton ordinateur (
+           <a target= "_blank" href="https://support.microsoft.com/fr-fr/windows/modifier-les-param%C3%A8tres-de-notification-et-de-notification-rapide-dans-windows-ddcbbcd4-0a02-f6e4-fe14-6766d850f294">Windows</a> ,
+           <a target= "_blank" href="https://support.apple.com/fr-fr/guide/reminders/remn4e53b572/mac#:~:text=Sur%20votre%20Mac%2C%20choisissez%20le,d%C3%A9sactivez%20%C2%AB%20Autoriser%20les%20notifications%20%C2%BB.">Mac</a> ou
+           <a target= "_blank" href="https://help.ubuntu.com/stable/ubuntu-help/shell-notifications.html.fr">Linux</a>)</p>
       </div>
    <script src="popup.js"></script>
-  </body>
+</body>
 </html>

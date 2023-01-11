@@ -1,0 +1,25 @@
+#aideNotifications {
+    text-decoration: none;
+    font-style: italic;
+    font-size: smaller;
+}
+
+#aideNotifications:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+p#tooltipText {
+    display: none; 
+}
+
+#definition {
+    color: black;
+    text-decoration: none;
+    font-style: italic;
+}
+
+#definition:hover {
+    color: grey;
+    cursor: pointer;
+}

@@ -1,7 +1,5 @@
 'use strict';
 
-// rajouter un bouton sur la notification pour relancer un session de travail ? 
-
 var compteurSessions=0;
 var alarmWork = 'work';
 const alarmBreak = 'break';
@@ -31,9 +29,9 @@ chrome.alarms.onAlarm.addListener(function(alarm){
     });
     console.log(compteurSessions)
     if (compteurSessions%4 == 0){
-      setBreakAlarm(2) // à changer pour 30
+      setBreakAlarm(2) // à changer pour 30 à la fin des tests
     }else{
-      setBreakAlarm(1) // à changer pour 5
+      setBreakAlarm(1) // à changer pour 5 à la fin des tests
     }
   }else if(alarm.name === "work"){
     chrome.action.setBadgeText({ text: '' });
