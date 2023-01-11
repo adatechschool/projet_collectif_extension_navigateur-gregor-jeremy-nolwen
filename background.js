@@ -1,14 +1,20 @@
 'use strict';
 
-var alarmNameWork = 'work';
+// rajouter un bouton sur la notification pour relancer un session de travail ? 
+
+var compteurSessions=0;
+var alarmWork = 'work';
 
 function setBreakAlarm(n){
   let minutes = parseFloat(n);
-  chrome.action.setBadgeText({text: '||'});
-  chrome.alarms.create(alarmNameWork,{
-    delayInMinutes: minutes});
+  if (n=1){
+    chrome.action.setBadgeText({text: '||'});
+  } else if (n==2){
+    chrome.action.setBadgeText({text: 'OFF'});
+}
+  chrome.alarms.create(alarmWork,{
+  delayInMinutes: minutes});
   chrome.storage.sync.set({minutes: minutes});
-  /* window.open(); */
 }
 
 chrome.alarms.onAlarm.addListener(function(alarm){
@@ -22,8 +28,8 @@ chrome.alarms.onAlarm.addListener(function(alarm){
       message: "C'est l'heure de la pause!",
       priority: 0,
     });
-    if (compteurSessions==4){
-      compteurSessions = 0
+    console.log(compteurSessions)
+    if (compteurSessions%4 == 0){
       setBreakAlarm(2) // à changer pour 30
     }else{
       setBreakAlarm(1) // à changer pour 5
