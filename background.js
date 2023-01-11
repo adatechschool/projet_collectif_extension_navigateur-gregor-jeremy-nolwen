@@ -28,10 +28,12 @@ chrome.alarms.onAlarm.addListener(function(alarm){
       message: "C'est l'heure de la pause!",
       priority: 0,
     });
-    console.log(compteurSessions)
+    console.log(" c'est l'heure de la pause numero :"+ compteurSessions)
     if (compteurSessions%4 == 0){
+      console.log("grosse pause")
       setBreakAlarm(2) // à changer pour 30
     }else{
+      console.log("petite pause")
       setBreakAlarm(1) // à changer pour 5
     }
   }else if(alarm.name === "work"){
