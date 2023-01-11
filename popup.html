@@ -5,6 +5,7 @@
     <style>
       body {
         text-align: center;
+        border-radius: 10px
       }
 
       #tomatoImage {
@@ -12,24 +13,37 @@
         margin: 50px;
       }
 
-      button {
-        margin: 5px;
-        outline: none;
-        padding: 2px;
+      #definition {
+        color: black;
+        text-decoration: none;
       }
 
+      #definition:hover {
+        color: grey;
+      }
+
+      button {
+        margin: 10px;
+        outline: none;
+        padding: 10px;
+        border-radius: 10px;
+        border-color: rgb(237, 237, 237);
+        border-width:thin
+      }  
+
+      button:active { 
+        border : none ;
+        outline: none }
+
       button:hover {
-        background-color: rgb(0, 201, 77);
+        background-color: rgb(172, 255, 113);
       }
     </style>
-    <!--
-      - JavaScript and HTML must be in separate files
-     -->
   </head>
   <body>
-      <img src='/img/tomato.png' id='tomatoImage'>
-      <button id="sampleMinute" value="1">Sample minute</button>
-      <button id="auTravail" value="25">Au travail !</button>
+      <a id="definition" target="_blank" href="https://fr.wikipedia.org/wiki/Technique_Pomodoro"> Qu'est ce que la methode Pomodoro ?</a>
+      <img src='/img/tomato.png' id='tomatoImage'>     
+      <button id="auTravail" value="1">Au travail !</button> <!-- changer pour 25 à la fin des tests -->
    <script src="popup.js"></script>
   </body>
 </html>
