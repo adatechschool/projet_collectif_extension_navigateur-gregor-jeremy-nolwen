@@ -4,6 +4,7 @@
 
 var compteurSessions=0;
 var alarmWork = 'work';
+const alarmBreak = 'break';
 
 function setBreakAlarm(n){
   let minutes = parseFloat(n);
@@ -41,8 +42,19 @@ chrome.alarms.onAlarm.addListener(function(alarm){
       iconUrl: '/img/tomato.png',
       title: "It's Time",
       message: "C'est l'heure de bosser feignasse!",
+      buttons: [
+        { title: 'Back to work' }
+      ],
       priority: 0
     });
   }
 }); 
+
+chrome.notifications.onButtonClicked.addListener(async () => {
+  const item = await chrome.storage.sync.get(['minutes']);
+  console.log (item)
+  chrome.action.setBadgeText({ text: 'ON' });
+  chrome.alarms.create(alarmBreak,{
+    delayInMinutes: item.minutes});
+});
   
