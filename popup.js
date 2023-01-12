@@ -13,14 +13,14 @@ function setWorkAlarm(event) {
  // window.close(); à remettre après les tests ( fermait la console )
 }
 
-document.getElementById('auTravail').addEventListener('click', setWorkAlarm);
+document.getElementById('startWorking').addEventListener('click', setWorkAlarm);
 
 const divTip = document.getElementById("tooltipDiv");
 const tooltip = document.getElementById("tooltipText");
 
 divTip.addEventListener('click', () => {
-  tooltip.style.display = 'block'; // change display to 'block' on mouseover
-}, false);
+  tooltip.style.display = 'block'; // change display to 'block' on click
+}, true);
 
 
 // TESTS POUR EMPECHER ACCES RESEAUX SOCIAUX //

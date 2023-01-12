@@ -5,80 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tomato timer</title>
-    <link rel="stylesheet" href="links.css" />
     <link rel="stylesheet" href="toDo.css">
-    <style>
-      body {
-        text-align: center;
-        border-radius: 10px;
-      }
-
-      button {
-        margin: 10px;
-        outline: none;
-        padding: 10px;
-        border-radius: 10px;
-        border-color: rgb(237, 237, 237);
-        border-width: thin;
-      }
-
-      button:active {
-        border: none;
-        outline: none;
-      }
-
-      button:hover {
-        background-color: rgb(172, 255, 113);
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
     <a
-      id="definition"
+      class ="ressources" id="definition"
       target="_blank"
-      href="https://fr.wikipedia.org/wiki/Technique_Pomodoro"
+      href="https://en.wikipedia.org/wiki/Pomodoro_Technique"
     >
-      Qu'est ce que la methode Pomodoro ?</a
+      What's Pomodoro technique ?</a
     >
-    <div id="divToDo">
+    <section id="sectionToDo">
       <h1>T<span><img src='/img/tomato.png' id='tomatoImage'></span>mato Timer </h1> <!-- mettre le bon alignement de la tomate-->
-      <header>
-        <h2>My To Do List </h2>
-        <input type="text" id="todo" />
-        <input id="submitToDo" type="submit" value="ADD" />
-      </header>
-        <ul>
-          <li>Remplir ma to do list<span>x</span></li>
+        <p id="legendToDo">Add new tasks : <p>
+          <div id="divInputToDo">
+            <input type="text" id="todo"/>
+            <input id="submitToDo" type="submit" value="add"/>
+          </div>
+        <ul id="tasksList">
+          <li>Fill in my to do List<span>x</span></li>
         </ul>
-    </div>
-    <button id="auTravail" value="1">Au travail !</button>
+      </section>
+    <button id="startWorking" value="1">Start Working</button>
     <!-- changer pour 25 à la fin des tests -->
     <div id="tooltipDiv">
-      <p id="aideNotifications">Je n'ai pas de notifications</p>
+      <p class="ressources" id="aideNotifications">I don't get any notifications</p>
       <p id="tooltipText">
-        Cela peut venir de tes
+        It could come from your
         <a
           target="_blank"
-          href="https://support.google.com/chrome/answer/3220216?hl=fr&co=GENIE.Platform%3DDesktop"
-          >paramètres chrome</a
+          href="https://support.google.com/chrome/answer/3220216?hl=en&co=GENIE.Platform%3DDesktop"
+          >Chrome parameters</a
         >
-        ou des paramètres de ton ordinateur (
+        or your computer parameters (
         <a
           target="_blank"
-          href="https://support.microsoft.com/fr-fr/windows/modifier-les-param%C3%A8tres-de-notification-et-de-notification-rapide-dans-windows-ddcbbcd4-0a02-f6e4-fe14-6766d850f294"
+          href="https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-8942c744-6198-fe56-4639-34320cf9444e"
           >Windows</a
         >
         ,
         <a
           target="_blank"
-          href="https://support.apple.com/fr-fr/guide/reminders/remn4e53b572/mac#:~:text=Sur%20votre%20Mac%2C%20choisissez%20le,d%C3%A9sactivez%20%C2%AB%20Autoriser%20les%20notifications%20%C2%BB."
+          href="https://support.apple.com/en-ie/guide/mac-help/mh40583/mac"
           >Mac</a
         >
-        ou
+        or
         <a
           target="_blank"
-          href="https://help.ubuntu.com/stable/ubuntu-help/shell-notifications.html.fr"
+          href="https://help.ubuntu.com/stable/ubuntu-help/shell-notifications.html.en"
           >Linux</a
         >)
       </p>
