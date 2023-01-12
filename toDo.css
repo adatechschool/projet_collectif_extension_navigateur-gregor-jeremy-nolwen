@@ -1,43 +1,91 @@
 
-  #tomatoImage {
-    width: 25px;
-    margin-top: 10px;
-  }
+      body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        padding: 25px;
+      }
 
-  h1 {
-    text-align: center;
-  }
-  
-  header {
-    padding: 10px;
-    text-align: center;
-  }
+      h1
+      {
+        display: inline-flex;
+      }
 
-  ul {
-    list-style: none;
-    width: 100%;
-    padding: 10px;
-  }
+      .ressources{
+        text-decoration: none;
+        font-style: italic;
+        font-size: smaller;
+        color: black;
+        text-decoration: none;
+    }
+    
+    .ressources:hover{
+        color: grey;
+        cursor: pointer;
+    }
 
-  li {
-    position: relative;
-  }
+    #tomatoImage {
+      width: 30px;
+      margin-top: -5px;
+    }
 
-  li span {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
+    #tooltipText {
+      display: none; 
+    }
 
-  li:hover {
-    cursor: pointer;
-  }
+    button {
+        margin: 10px;
+        outline: none;
+        padding: 10px;
+        border-radius: 10px;
+        border-color: rgb(237, 237, 237);
+        border-width: thin;
+    }
 
-  input[type="submit"] {
-    cursor: pointer;
-  }
+/*       button:active {
+        border: none;
+        outline: none;
+      }
+     */
+      #inputToDo {
+        max-width: 100px;
+      }
 
-  li.checked {
-    text-decoration: line-through;
-    color: grey ;
-  }
+      button:hover {
+        background-color: rgb(172, 255, 113);
+        cursor: pointer;
+      }
+      
+      #divInputTodo {
+        display: inline-flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+      }
+
+      #tasksList {
+        list-style: none;
+        width: 100%;
+        padding: 10px;
+      }
+
+      li {
+        position: relative;
+        display: flex;
+        align-content: space-between;
+        justify-content: space-between;
+      } 
+
+      li:hover {
+        cursor: pointer;
+      }
+
+      li.checked {
+        text-decoration: line-through;
+        color: grey ;
+      }
+
+      #legendToDo {
+        align-self: flex-start;
+      }
