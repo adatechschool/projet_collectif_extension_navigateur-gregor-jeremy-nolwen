@@ -1,0 +1,59 @@
+body {
+    background-color: #b5b5b5;
+    margin: 100px;
+  }
+
+  #tomatoImage {
+    width: 25px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    background-color: orange;
+  }
+
+  section {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: inherit;
+  }
+
+  header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    width: 100%;
+    padding: 10px;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  li:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+
+  input[type="submit"] {
+    cursor: pointer;
+  }
+
+  li.checked {
+    text-decoration: line-through;
+    color: white;
+    background-color: rgb(162, 162, 162);
+  }
