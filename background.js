@@ -57,4 +57,4 @@ chrome.notifications.onButtonClicked.addListener(async () => {
   chrome.alarms.create(alarmBreak,{
     delayInMinutes: item.minutes});
 });
-  
+

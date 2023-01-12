@@ -28,3 +28,4 @@ function deleteToDo() {
     ul.removeChild(this.parentElement);
 }
 
+document.getElementById('submitToDo').addEventListener('click', addToDo);

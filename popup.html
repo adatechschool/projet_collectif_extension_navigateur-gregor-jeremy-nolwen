@@ -6,15 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tomato timer</title>
     <link rel="stylesheet" href="links.css" />
+    <link rel="stylesheet" href="toDo.css">
     <style>
       body {
         text-align: center;
         border-radius: 10px;
-      }
-
-      #tomatoImage {
-        width: 100px;
-        margin: 50px;
       }
 
       button {
@@ -45,7 +41,17 @@
     >
       Qu'est ce que la methode Pomodoro ?</a
     >
-    <img src="/img/tomato.png" id="tomatoImage" />
+    <div id="divToDo">
+      <h1>T<span><img src='/img/tomato.png' id='tomatoImage'></span>mato Timer </h1> <!-- mettre le bon alignement de la tomate-->
+      <header>
+        <h2>My To Do List </h2>
+        <input type="text" id="todo" />
+        <input id="submitToDo" type="submit" value="ADD" />
+      </header>
+        <ul>
+          <li>Remplir ma to do list<span>x</span></li>
+        </ul>
+    </div>
     <button id="auTravail" value="1">Au travail !</button>
     <!-- changer pour 25 à la fin des tests -->
     <div id="tooltipDiv">
@@ -78,5 +84,6 @@
       </p>
     </div>
     <script src="popup.js"></script>
+    <script src="toDo.js"></script>
   </body>
 </html>
