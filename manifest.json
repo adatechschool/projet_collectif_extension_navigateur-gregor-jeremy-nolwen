@@ -3,6 +3,7 @@
   "authors" : "Jeremy Zinger, Gregor XXX, Nolwen Major Francès",
   "description": "Cette extension de navigateur permet une gestion du temps de travail basée sur la méthode Pomodoro.",
   "version": "1.0",
+  "author" : "Nolwen Major Francès, Jeremy Zinger, Gregor Bechet",
   "manifest_version": 3,
   "permissions": [
     "alarms",
@@ -19,5 +20,13 @@
   },
   "icons": {
     "16": "/img/tomato.png"
-  }
+  },
+  "content_scripts":
+  [
+      {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+      }
+  ]
+  
 }
