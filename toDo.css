@@ -89,3 +89,17 @@
       #legendToDo {
         align-self: flex-start;
       }
+
+      p#tooltipToDo{
+        display: none; 
+       /*  position: absolute; */
+        font-size:smaller;
+        background-color: lightgray;
+        border-radius: 5px;
+        padding: 2px;
+      }
+      
+      p#tooltipToDo:before {
+        content: "";
+       /*  position: absolute; */
+      }

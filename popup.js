@@ -22,6 +22,17 @@ divTip.addEventListener('click', () => {
   tooltip.style.display = 'block'; // change display to 'block' on click
 }, true);
 
+const divTasks = document.getElementById("legends");
+const tooltipToDo = document.getElementById("tooltipToDo");
+
+divTasks.addEventListener('mouseover', () => {
+  tooltipToDo.style.display = 'block'; // change display to 'block' on mouseover
+}, false);
+
+divTasks.addEventListener('mouseleave', () => {
+  tooltipToDo.style.display = 'none'; // change display to 'none' on mouseleave
+}, false);
+
 
 // TESTS POUR EMPECHER ACCES RESEAUX SOCIAUX //
 

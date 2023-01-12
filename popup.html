@@ -17,8 +17,11 @@
     >
     <section id="sectionToDo">
       <h1>T<span><img src='/img/tomato.png' id='tomatoImage'></span>mato Timer </h1> <!-- mettre le bon alignement de la tomate-->
-        <p id="legendToDo">Add new tasks : <p>
-          <div id="divInputToDo">
+      <div id="legends">
+        <p id="legendToDo">My to do list : <p>
+        <p id="tooltipToDo">Click on cross to delete the entry <br> Click on task to mark it as done</p>
+      </div>
+        <div id="divInputToDo">
             <input type="text" id="todo"/>
             <input id="submitToDo" type="submit" value="add"/>
           </div>
@@ -26,7 +29,7 @@
           <li>Fill in my to do List<span>x</span></li>
         </ul>
       </section>
-    <button id="startWorking" value="1">Start Working</button>
+        <button id="startWorking" value="1">Start Working</button>
     <!-- changer pour 25 à la fin des tests -->
     <div id="tooltipDiv">
       <p class="ressources" id="aideNotifications">I don't get any notifications</p>
