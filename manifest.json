@@ -11,7 +11,7 @@
     "tabs"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker":"background.js"
   },
   "action": {
     "default_title": "It's time !",

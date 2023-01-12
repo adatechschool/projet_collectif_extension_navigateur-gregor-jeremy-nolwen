@@ -264,7 +264,7 @@ switch (true) {
     document.head.innerHTML = generateSTYLES();
     document.body.innerHTML = generateHTML("NETFLIX");
     break;
-  case window.location.hostname.startsWith("www.spotify.com"):
+  case window.location.hostname.startsWith("open.spotify.com"):
     document.head.innerHTML = generateSTYLES();
     document.body.innerHTML = generateHTML("SPOTIFY");
     break;

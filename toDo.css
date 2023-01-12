@@ -1,27 +1,13 @@
-body {
-    background-color: #b5b5b5;
-    margin: 100px;
-  }
 
   #tomatoImage {
     width: 25px;
+    margin-top: 10px;
   }
 
   h1 {
     text-align: center;
   }
-
-  h2 {
-    background-color: orange;
-  }
-
-  section {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    background: inherit;
-  }
-
+  
   header {
     padding: 10px;
     text-align: center;
@@ -45,7 +31,6 @@ body {
 
   li:hover {
     cursor: pointer;
-    background-color: white;
   }
 
   input[type="submit"] {
@@ -54,6 +39,5 @@ body {
 
   li.checked {
     text-decoration: line-through;
-    color: white;
-    background-color: rgb(162, 162, 162);
+    color: grey ;
   }
