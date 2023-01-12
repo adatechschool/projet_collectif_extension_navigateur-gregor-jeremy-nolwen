@@ -24,10 +24,10 @@ chrome.alarms.onAlarm.addListener(function(alarm){
       type: 'basic',
       iconUrl: '/img/tomato.png',
       title: "It's Time",
-      message: "C'est l'heure de la pause!",
+      message: "Time for a break !",
       priority: 0,
     });
-    console.log(" c'est l'heure de la pause numero :"+ compteurSessions)
+    console.log(" Time for a break !"+ compteurSessions)
     if (compteurSessions%4 == 0){
       console.log("grosse pause")
       setBreakAlarm(2) // à changer pour 30 à la fin des tests
@@ -41,7 +41,7 @@ chrome.alarms.onAlarm.addListener(function(alarm){
       type: 'basic',
       iconUrl: '/img/tomato.png',
       title: "It's Time",
-      message: "C'est l'heure de bosser feignasse!",
+      message: "Time to go back to work !",
       buttons: [
         { title: 'Back to work' }
       ],
