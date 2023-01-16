@@ -291,6 +291,3 @@ function addFilter() {
       break;
   }
 }
-
-
-addFilter()
