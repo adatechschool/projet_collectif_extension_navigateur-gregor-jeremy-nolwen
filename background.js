@@ -58,3 +58,32 @@ chrome.notifications.onButtonClicked.addListener(async () => {
     delayInMinutes: item.minutes});
 });
 
+// const inject = async (tabId) => {
+//   chrome.scripting.executeScript(
+//     {
+//       target: { tabId: tabId },
+//       files: ["mimi.js"],
+//     },
+//     () => {}
+//   );
+// };
+// chrome.tabs.onActivated.addListener((e) => {
+//   inject(e.tabId);
+// });
+// chrome.action.onClicked.addListener((tab) => {
+//   chrome.scripting.executeScript({
+//     target: {
+//       tabId: tab.id,
+//     },
+//     files: ["mimi.js"],
+//   });
+// });
+
+
+
+
+
+
+
+
+
