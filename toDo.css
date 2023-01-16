@@ -13,8 +13,8 @@
 
     h1
     {
-      display: inline-flex;
       font-size: 25px;
+      color: red;
     }
 
     .ressources{
@@ -38,10 +38,8 @@
 
     #tomatoImage {
       width: 30px;
-      margin-top: 2px;
+      vertical-align: middle;
     }
-
-    
 
     .buttons {
         outline: none;
@@ -104,7 +102,7 @@
         padding: 2px;
       }
       
-      #legendToDo {
+     /*  #legendToDo {
         color: red;
-        font-size: 20px;
-      }
+        font-size: 10px;
+      } */
