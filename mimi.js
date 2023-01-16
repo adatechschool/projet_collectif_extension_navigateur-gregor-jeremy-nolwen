@@ -1,4 +1,5 @@
 function addFilter() {
+  
   function generateSTYLES() {
     return `<style>@import url(https://fonts.googleapis.com/css?family=opensans:500);
   body {

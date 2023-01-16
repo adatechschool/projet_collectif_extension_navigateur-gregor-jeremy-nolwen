@@ -26,8 +26,19 @@ function addToDo() {
 function checked() {
   var classLi = this.getAttribute("class");
   if (classLi === "checked") this.setAttribute("class", "unchecked");
-  else this.setAttribute("class", "checked");
+  else {
+    this.setAttribute("class", "checked");
+    // get task text
+    var taskText = this.innerHTML;
+    // remove task from tasks array
+    var index = tasks.indexOf(taskText);
+    tasks.splice(index, 1);
+    // update local storage
+    localStorage.setItem("tasks", tasks.toString());
+  }
 }
+
+
 function deleteToDo() {
   var taskToRemove = this.parentElement.innerHTML;
   var index = tasks.indexOf(taskToRemove);
@@ -45,9 +56,11 @@ window.onload = function () {
       var li = document.createElement("li");
       li.innerHTML = tasks[i];
       li.addEventListener("click", checked);
+      console.log("onload,checked")
       var span = document.createElement("span");
       span.innerHTML = "x";
       span.addEventListener("click", deleteToDo);
+      console.log("onload, delete")
       li.appendChild(span);
       ul.appendChild(li);
     }
