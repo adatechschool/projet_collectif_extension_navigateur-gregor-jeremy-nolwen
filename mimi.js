@@ -292,4 +292,3 @@ function addFilter() {
 }
 
 
-addFilter()
