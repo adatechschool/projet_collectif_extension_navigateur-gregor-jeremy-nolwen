@@ -19,6 +19,7 @@ function setBreakAlarm(n) {
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
   if (alarm.name === "break") {
+    alarmWork = "notworking";
     compteurSessions += 1;
     chrome.action.setBadgeText({ text: "" });
     chrome.notifications.create({
@@ -54,9 +55,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log("Message received: ", message);
   // 2. A page requested user data, respond with a copy of `user`
   if (message.greeting === "get-user-data" && alarmWork == "work") {
-    const user = "O";
+    const user = "ON";
     sendResponse(user);
     return true;
   }
-  return true;
 });
