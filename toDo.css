@@ -1,79 +1,77 @@
 
-      body {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        width: 200px;
-        padding: 25px;
-      }
+    body {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      width: 100%;
+      max-width: fit-content;
+    }
 
-      h1
-      {
-        display: inline-flex;
-      }
+    h1
+    {
+      display: inline-flex;
+    }
 
-      .ressources{
-        text-decoration: none;
-        font-style: italic;
-        font-size: smaller;
-        color: black;
-        text-decoration: none;
+    .ressources{
+      text-decoration: none;
+      font-style: italic;
+      font-size: smaller;
+      color: black;
+      text-decoration: none;
     }
     
     .ressources:hover{
-        color: grey;
-        cursor: pointer;
+      color: grey;
+      cursor: pointer;
     }
+
+    .tooltips {
+      display: none; 
+    }
+
 
     #tomatoImage {
       width: 30px;
       margin-top: -5px;
     }
 
-    #tooltipText {
-      display: none; 
-    }
+    
 
-    button {
-        margin: 10px;
+    .buttons {
         outline: none;
-        padding: 10px;
-        border-radius: 10px;
+        margin: 2px;
+        padding: 2px;
+        border-radius: 4px;
         border-color: rgb(237, 237, 237);
         border-width: thin;
+        font-size: small;
     }
 
-/*       button:active {
-        border: none;
-        outline: none;
-      }
-     */
-      #inputToDo {
-        max-width: 100px;
-      }
+  /*     #inputToDo {
+        max-width: 60px;
+      } */
 
-      button:hover {
+      .buttons:hover {
         background-color: rgb(172, 255, 113);
         cursor: pointer;
       }
       
-      #divInputTodo {
+      #divInputToDo {
+        width: 100%;
         display: inline-flex;
         flex-direction: row;
         align-content: space-between;
-        justify-content: space-between;
+        justify-content: space-between; 
       }
 
-      #tasksList {
-        list-style: none;
+     /*  #tasksList {
         width: 100%;
-        padding: 10px;
-      }
+      } */
 
       li {
-        position: relative;
+/*         position: relative; */
         display: flex;
-        align-content: space-between;
         justify-content: space-between;
       } 
 
@@ -86,20 +84,16 @@
         color: grey ;
       }
 
-      #legendToDo {
+     /*  #legendToDo {
         align-self: flex-start;
-      }
+      } */
 
       p#tooltipToDo{
         display: none; 
-       /*  position: absolute; */
         font-size:smaller;
         background-color: lightgray;
         border-radius: 5px;
         padding: 2px;
       }
       
-      p#tooltipToDo:before {
-        content: "";
-       /*  position: absolute; */
-      }
+

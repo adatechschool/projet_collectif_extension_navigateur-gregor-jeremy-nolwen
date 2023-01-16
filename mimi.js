@@ -1,5 +1,6 @@
-function generateSTYLES() {
-  return `<style>@import url(https://fonts.googleapis.com/css?family=opensans:500);
+function addFilter() {
+  function generateSTYLES() {
+    return `<style>@import url(https://fonts.googleapis.com/css?family=opensans:500);
   body {
     background: pink;
     color: #fff;
@@ -12,14 +13,14 @@ function generateSTYLES() {
     display: block;
     position: relative;
     width: 80%;
-    margin: 100px auto;
+    margin: 200px auto;
   }
   .STOP {
-    font-size: 220px;
+    font-size: 200px;
     position: relative;
     display: inline-block;
     z-index: 2;
-    height: 250px;
+    height: 200px;
     letter-spacing: 15px;
   }
   ._1 {
@@ -34,8 +35,11 @@ function generateSTYLES() {
     text-align: center;
     display: block;
     position: relative;
-    font-size: 20px;
+    font-size: 70px;
+    margin-top: 1em;
+    color: #b16f6f;
   }
+  
   .text {
     font-size: 70px;
     text-align: center;
@@ -61,7 +65,7 @@ function generateSTYLES() {
     border-top: 5px solid #fff;
     color: #fff;
     text-align: center;
-    margin: 0px auto;
+    margin: 20px auto;
     width: 420px;
     height: 10px;
     z-index: -10;
@@ -229,10 +233,10 @@ function generateSTYLES() {
     }
   }
    </style>`;
-}
+  }
 
-function generateHTML(pageName) {
-  return `
+  function generateHTML(pageName) {
+    return `
    
    <div id="clouds">
       <div class="cloud x1"></div>
@@ -249,31 +253,43 @@ function generateHTML(pageName) {
       <div class='_2'>STUDYING > ${pageName}</div>
   </div>
    `;
+  }
+
+  switch (true) {
+    case window.location.hostname.startsWith("www.youtube.com"):
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("YOUTUBE");
+      break;
+    case window.location.hostname.startsWith("www.facebook.com"):
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("FACEBOOK");
+      break;
+    case window.location.hostname.startsWith("www.netflix.com"):
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("NETFLIX");
+      break;
+    case window.location.hostname.startsWith("open.spotify.com"):
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("SPOTIFY");
+      break;
+    case window.location.hostname.startsWith("www.instagram.com"):
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("INSTAGRAM");
+      break;
+    case window.location.hostname.startsWith("www.tiktok.com"):
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("TIKTOK");
+      break;
+    case window.location.hostname.startsWith("www.twitch.tv"):
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("TWITCH");
+      break;
+    case window.location.hostname.startsWith("twitter.com"):
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("TWITTER");
+      break;
+  }
 }
 
-switch (true) {
-  case window.location.hostname.startsWith("www.youtube.com"):
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("YOUTUBE");
-    break;
-  case window.location.hostname.startsWith("www.facebook.com"):
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("FACEBOOK");
-    break;
-  case window.location.hostname.startsWith("www.netflix.com"):
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("NETFLIX");
-    break;
-  case window.location.hostname.startsWith("open.spotify.com"):
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("SPOTIFY");
-    break;
-  case window.location.hostname.startsWith("www.instagram.com"):
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("INSTAGRAM");
-    break;
-  case window.location.hostname.startsWith("www.tiktok.com"):
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("TIKTOK");
-    break;
-}
+
+addFilter()
