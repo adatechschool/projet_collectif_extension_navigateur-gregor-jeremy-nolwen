@@ -43,20 +43,12 @@ chrome.alarms.onAlarm.addListener(function(alarm){
       title: "It's Time",
       message: "Time to go back to work !",
       buttons: [
-        { title: 'Back to work' }
+        {title: 'Back to work' },
       ],
       priority: 0
     });
   }
 }); 
-
-chrome.notifications.onButtonClicked.addListener(async () => {
-  const item = await chrome.storage.sync.get(['minutes']);
-  console.log (item)
-  chrome.action.setBadgeText({ text: 'ON' });
-  chrome.alarms.create(alarmBreak,{
-    delayInMinutes: item.minutes});
-});
 
 // const inject = async (tabId) => {
 //   chrome.scripting.executeScript(
