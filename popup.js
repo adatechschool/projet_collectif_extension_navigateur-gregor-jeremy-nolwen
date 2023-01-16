@@ -33,36 +33,11 @@ divTasks.addEventListener('mouseleave', () => {
   tooltipToDo.style.display = 'none'; // change display to 'none' on mouseleave
 }, false);
 
-
-// TESTS POUR EMPECHER ACCES RESEAUX SOCIAUX //
-
-// document.getElementById('facebook').addEventListener('click',setInterdiction);
-
-/* function doNotAccess() {
-  if ( window.location.hostname ==  "facebook.com"){
-    alert ("C'est pas l'heure de checker FB !");
-    //document.head.innerHTML = ("<style> body {background : pink} </style>")
-  }
-}
-
-chrome.tabs.onCreated.addListener(doNotAccess());
-chrome.tabs.onUpdated.addListener(doNotAccess());
- */
-
-
-/* targetHour.addEventListener('mouseleave', () => {
-  tooltipHour.style.display = 'none'; // change display to 'none' on mouseleave
-}, false); */
-
-// vieux tests 
-/* function setInterdiction(event) {
-  pageToForbid = event.target.value
-} */
-/* 
-function drawInterdiction(){
-  if (window.location.hostname == pageToForbid) {
-    alert ("C'est pas l'heure de checker FB !");
-    document.head.innerHTML = ("<style> body {background : pink} </style>")
-  }
-}
- */
+chrome.notifications.onButtonClicked.addListener(async () => {
+  let minutes = parseFloat(document.getElementById('startWorking').value)  
+  //const item = await chrome.storage.sync.get(['minutes']);
+  console.log ("btn notif timer :", minutes, "minute")
+  chrome.action.setBadgeText({ text: 'ON' });
+  chrome.alarms.create(alarmBreak,{
+    delayInMinutes: minutes});
+});
