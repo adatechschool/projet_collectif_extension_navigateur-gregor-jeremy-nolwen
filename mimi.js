@@ -290,5 +290,3 @@ function addFilter() {
       break;
   }
 }
-
-
