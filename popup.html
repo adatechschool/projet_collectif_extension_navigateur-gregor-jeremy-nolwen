@@ -5,38 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tomato timer</title>
-    <link rel="stylesheet" href="toDo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="toDo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <a
-      class ="ressources" id="definition"
+      class="ressources"
+      id="definition"
       target="_blank"
       href="https://en.wikipedia.org/wiki/Pomodoro_Technique"
     >
       What's Pomodoro technique ?</a
     >
     <section id="sectionToDo">
-      <h1>T<span><img src='/img/tomato.png' id='tomatoImage'></span>mato Timer </h1> <!-- mettre le bon alignement de la tomate-->
+      <h1>
+        T<span><img src="/img/tomato.png" id="tomatoImage" /></span>mato Timer
+      </h1>
+      <!-- mettre le bon alignement de la tomate-->
       <div id="legends">
-        <p id="legendToDo">My to do list : <p>
-        <p class="tooltips" id="tooltipToDo">Click on cross to delete the entry <br> Click on task to mark it as done</p>
+        <p id="legendToDo">My to do list :</p>
+        <p></p>
+        <p class="tooltips" id="tooltipToDo">
+          Click on cross to delete the entry <br />
+          Click on task to mark it as done
+        </p>
       </div>
       <div id="divInputToDo">
-            <input type="text" id="todo"/>
-            <input class=buttons id="submitToDo" type="submit" value="add"/>
+        <input type="text" id="todo" />
+        <input class="buttons" id="submitToDo" type="submit" value="add" />
       </div>
-        <ul id="tasksList">
-          <li>Fill in my to do List<span>x</span></li>
-        </ul>
-      </section>
-        <button class=buttons id="copyBtn">Copy</button>
-        <button class=buttons id="startWorking" value="1">Start Working</button>
+      <ul id="tasksList">
+        <li>Fill in my to do List<span>x</span></li>
+      </ul>
+    </section>
+    <button class="buttons" id="copyBtn">Copy</button>
+    <button class="buttons" id="startWorking">Start Working</button>
     <!-- changer pour 25 à la fin des tests -->
     <div id="tooltipDiv">
-      <p class="ressources" id="aideNotifications">I don't get any notifications</p>
+      <p class="ressources" id="aideNotifications">
+        I don't get any notifications
+      </p>
       <p class="tooltips" id="tooltipText">
         It could come from your
         <a

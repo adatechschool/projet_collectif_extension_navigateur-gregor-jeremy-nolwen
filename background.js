@@ -8,7 +8,7 @@ let user = "filterON";
 
 function setBreakAlarm(n) {
   let minutes = parseFloat(n);
-  if ((n = 1)) {
+  if (n == 1) {
     chrome.action.setBadgeText({ text: "||" });
   } else if (n == 2) {
     chrome.action.setBadgeText({ text: "OFF" });
@@ -57,13 +57,27 @@ console.log("background.js running");
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log("Message received: ", message);
   // 2. A page requested user data, respond with a copy of `user`
-  if (message.greeting === "get-user-data" && alarmStatus === alarmWork) {
+  if (message.state == "Work") {
+    setWorkAlarm(1); // a changer par 25 à la fin des tests
+  } else if (message.greeting === "get-user-data" && alarmStatus == alarmWork) {
     user = "filterON";
     sendResponse(user);
     return true;
-  } else {
-    user = "filterOFF";
-    sendResponse(user);
-    return true;
   }
+});
+
+function setWorkAlarm(num) {
+  alarmStatus = alarmWork;
+  let minutes = parseFloat(num);
+  chrome.action.setBadgeText({ text: "ON" });
+  chrome.alarms.create(alarmBreak, {
+    delayInMinutes: minutes,
+  });
+  chrome.storage.sync.set({ minutes: minutes });
+  // window.close(); à remettre après les tests ( fermait la console )
+}
+
+chrome.notifications.onButtonClicked.addListener(async () => {
+  console.log("btn notif timer :", minutes, "minute");
+  setWorkAlarm(1);
 });
