@@ -4,7 +4,7 @@ var compteurSessions = 0;
 const alarmWork = "work";
 const alarmBreak = "break";
 let alarmStatus = alarmBreak;
-let user = "filterON";
+let user = "filterOFF";
 
 function setBreakAlarm(n) {
   let minutes = parseFloat(n);
@@ -40,7 +40,6 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
       setBreakAlarm(1); // à changer pour 5 à la fin des tests
     }
   } else if (alarm.name === alarmWork) {
-    alarmStatus = alarmWork;
     chrome.action.setBadgeText({ text: "" });
     chrome.notifications.create({
       type: "basic",
@@ -78,6 +77,6 @@ function setWorkAlarm(num) {
 }
 
 chrome.notifications.onButtonClicked.addListener(async () => {
-  console.log("btn notif timer :", minutes, "minute");
+  console.log("btn notif timer a été appuyé !");
   setWorkAlarm(1);
 });
