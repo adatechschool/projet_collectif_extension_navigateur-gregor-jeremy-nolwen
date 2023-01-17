@@ -256,7 +256,7 @@ function generateHTML(pageName) {
 
 // executeScript runs this code inside the tab
 function addFilter(spec) {
-  if (spec == "ON") {
+  if (spec == "filter") {
     switch (true) {
       case window.location.hostname.startsWith("www.youtube.com"):
         document.head.innerHTML = generateSTYLES();
@@ -293,13 +293,14 @@ function addFilter(spec) {
     }
   }
 }
-addFilter();
 
-console.log("running this");
+console.log("mimi running this");
 chrome.runtime.sendMessage({ greeting: "get-user-data" }, (response) => {
   // 3. Got an asynchronous response with the data from the service worker
   console.log("received user data", response);
-  if (response == "ON") {
-    addFilter("ON");
+  if (response == "filterON") {
+    addFilter("filter");
+  } else {
+    addFilter("nofilter");
   }
 });

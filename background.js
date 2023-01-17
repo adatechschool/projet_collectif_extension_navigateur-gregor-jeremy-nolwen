@@ -1,8 +1,10 @@
 "use strict";
 
 var compteurSessions = 0;
-var alarmWork = "work";
+const alarmWork = "work";
 const alarmBreak = "break";
+let alarmStatus = alarmBreak;
+let user = "filterON";
 
 function setBreakAlarm(n) {
   let minutes = parseFloat(n);
@@ -18,8 +20,8 @@ function setBreakAlarm(n) {
 }
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
-  if (alarm.name === "break") {
-    alarmWork = "notworking";
+  if (alarm.name === alarmBreak) {
+    alarmStatus = alarmBreak;
     compteurSessions += 1;
     chrome.action.setBadgeText({ text: "" });
     chrome.notifications.create({
@@ -37,7 +39,8 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
       console.log("petite pause");
       setBreakAlarm(1); // à changer pour 5 à la fin des tests
     }
-  } else if (alarm.name === "work") {
+  } else if (alarm.name === alarmWork) {
+    alarmStatus = alarmWork;
     chrome.action.setBadgeText({ text: "" });
     chrome.notifications.create({
       type: "basic",
@@ -54,8 +57,12 @@ console.log("background.js running");
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log("Message received: ", message);
   // 2. A page requested user data, respond with a copy of `user`
-  if (message.greeting === "get-user-data" && alarmWork == "work") {
-    const user = "ON";
+  if (message.greeting === "get-user-data" && alarmStatus === alarmWork) {
+    user = "filterON";
+    sendResponse(user);
+    return true;
+  } else {
+    user = "filterOFF";
     sendResponse(user);
     return true;
   }
