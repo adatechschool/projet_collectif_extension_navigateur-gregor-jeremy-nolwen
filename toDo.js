@@ -4,6 +4,13 @@ var myListSpan = document.getElementsByTagName("span");
 var tasks = [];
 
 document.getElementById('submitToDo').addEventListener('click', addToDo);
+document.addEventListener('keypress', function (e) {
+  const code = (e.keyCode ? e.keyCode : e.which);
+  if (e.key === 'Enter' || code == 13) {
+    addToDo();
+    e.preventDefault();
+  }
+});
 
 function addToDo() {
   var todo = document.getElementById("todo").value;

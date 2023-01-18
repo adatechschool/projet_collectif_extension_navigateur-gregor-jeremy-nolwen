@@ -270,10 +270,6 @@ function addFilter(spec) {
         document.head.innerHTML = generateSTYLES();
         document.body.innerHTML = generateHTML("NETFLIX");
         break;
-      case window.location.hostname.startsWith("open.spotify.com"):
-        document.head.innerHTML = generateSTYLES();
-        document.body.innerHTML = generateHTML("SPOTIFY");
-        break;
       case window.location.hostname.startsWith("www.instagram.com"):
         document.head.innerHTML = generateSTYLES();
         document.body.innerHTML = generateHTML("INSTAGRAM");
