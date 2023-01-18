@@ -3,6 +3,14 @@ let tasks = [];
 
 document.getElementById("submitToDo").addEventListener("click", addToDo);
 
+document.addEventListener("keypress", function (e) {
+  const code = e.keyCode ? e.keyCode : e.which;
+  if (e.key === "Enter" || code == 13) {
+    addToDo();
+    e.preventDefault();
+  }
+});
+
 function addToDo() {
   let todo = document.getElementById("todo").value;
   if (todo === "") alert("You must write something !");
