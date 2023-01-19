@@ -18,10 +18,10 @@ https://dev.to/ben/how-to-install-chrome-extensions-manually-from-github-1612
 
 ## image de l'extension:
 
-![screenshot0](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2013-22-52.png "notif")
 ![screenshot1](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2011-56-18.png "popup1")
 ![screenshot2](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2011-59-52.png "popup2")
 ![screenshot3](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2012-51-13.png "cover")
+![screenshot4](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2013-22-52.png "notif")
 
 ## difficultés rencontrées:
 
