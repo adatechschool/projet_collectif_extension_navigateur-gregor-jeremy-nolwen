@@ -1,6 +1,4 @@
-# Nom:
-
-Tomato Timer
+# Nom: Tomato Timer
 
 ## Description:
 
