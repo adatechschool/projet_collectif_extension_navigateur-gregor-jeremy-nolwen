@@ -16,29 +16,43 @@ function addToDo() {
   if (todo === "") alert("You must write something !");
   else {
     tasks.push(todo);
+    // injection html et clear input
     let li = document.createElement("li");
-    li.innerHTML = todo;
+    let para = document.createElement("p")
+    para.innerHTML = todo;
     li.setAttribute("data-task", todo);
-    li.addEventListener("click", checked);
+    para.setAttribute("class", "unchecked")
+    para.addEventListener("click", checked);
     let span = document.createElement("span");
     span.innerHTML = "x";
     span.addEventListener("click", deleteToDo);
+    li.appendChild(para);
     li.appendChild(span);
     ul.appendChild(li);
-    localStorage.setItem("tasks", JSON.stringify(tasks));
     document.getElementById("todo").value = "";
+    // stockage 
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 }
 
 function checked() {
-  let classLi = this.getAttribute("class");
-  if (classLi === "checked") this.setAttribute("class", "unchecked");
-  else {
+  console.log('function checked')
+  let classPara = this.getAttribute("class");
+  let tasksToCheck = this.parentElement.getAttribute("data-task");
+  if (classPara === "checked") {
+    this.setAttribute("class", "unchecked");
+    tasks.push(tasksToCheck)
+    console.log("task" ,tasksToCheck)
+  }else {
     this.setAttribute("class", "checked");
+    let index = tasks.indexOf(tasksToCheck);
+    tasks.splice(index, 1);
   }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function deleteToDo() {
+  console.log("function delete")
   let taskToRemove = this.parentElement.getAttribute("data-task");
   let index = tasks.indexOf(taskToRemove);
   tasks.splice(index, 1);
@@ -52,12 +66,15 @@ window.onload = function () {
     tasks = JSON.parse(storedTasks);
     for (let i = 0; i < tasks.length; i++) {
       let li = document.createElement("li");
-      li.innerHTML = tasks[i];
+      let para = document.createElement("p")
+      para.innerHTML = tasks[i];
       li.setAttribute("data-task", tasks[i]);
-      li.addEventListener("click", checked);
+      para.setAttribute("class", "unchecked")
+      para.addEventListener("click", checked);
       let span = document.createElement("span");
       span.innerHTML = "x";
       span.addEventListener("click", deleteToDo);
+      li.appendChild(para);
       li.appendChild(span);
       ul.appendChild(li);
     }
