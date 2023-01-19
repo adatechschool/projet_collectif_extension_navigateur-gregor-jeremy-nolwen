@@ -63,3 +63,12 @@ window.onload = function () {
     }
   }
 };
+
+function copyTasks() {
+  var range = document.createRange();
+  range.selectNode(ul);
+  window.getSelection().addRange(range);
+  document.execCommand("copy");
+  alert("Tasks copied to clipboard!");
+}
+copyBtn.addEventListener("click", copyTasks);
