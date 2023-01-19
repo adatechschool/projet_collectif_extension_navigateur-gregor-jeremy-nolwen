@@ -3,26 +3,12 @@
 var compteurSessions = 0;
 const alarmWork = "work";
 const alarmBreak = "break";
-let alarmStatus = alarmBreak;
+let chronoStatus = "horsChrono";
 let user = "filterOFF";
-
-function setBreakAlarm(n) {
-  let minutes = parseFloat(n);
-  if (n == 1) {
-    chrome.action.setBadgeText({ text: "||" });
-  } else if (n == 2) {
-    chrome.action.setBadgeText({ text: "OFF" });
-  }
-  chrome.alarms.create(alarmWork, {
-    delayInMinutes: minutes,
-  });
-  chrome.storage.sync.set({ minutes: minutes });
-}
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
   if (alarm.name === alarmBreak) {
-    alarmStatus = alarmBreak;
-    compteurSessions += 1;
+    chronoStatus = alarmBreak;
     chrome.action.setBadgeText({ text: "" });
     chrome.notifications.create({
       type: "basic",
@@ -40,6 +26,7 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
       setBreakAlarm(1); // à changer pour 5 à la fin des tests
     }
   } else if (alarm.name === alarmWork) {
+    chronoStatus = "horsChrono"
     chrome.action.setBadgeText({ text: "" });
     chrome.notifications.create({
       type: "basic",
@@ -52,22 +39,28 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
   }
 });
 
-console.log("background.js running");
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log("Message received: ", message);
   // 2. A page requested user data, respond with a copy of `user`
-  if (message.state == "Work") {
+  if (message.state == "Work" && chronoStatus != alarmWork && chronoStatus != alarmBreak) {
     setWorkAlarm(1); // a changer par 25 à la fin des tests
     return true;
-  } else if (message.greeting === "get-user-data" && alarmStatus == alarmWork) {
+  } else if (message.greeting === "get-user-data" && chronoStatus == alarmWork) {
     user = "filterON";
     sendResponse(user);
     return true;
   }
 });
 
+chrome.notifications.onButtonClicked.addListener(async () => {
+  console.log("btn notif timer a été appuyé !");
+  setWorkAlarm(1);
+});
+
 function setWorkAlarm(num) {
-  alarmStatus = alarmWork;
+  compteurSessions += 1;
+  console.log("session de travail : ", compteurSessions)
+  chronoStatus = alarmWork;
   let minutes = parseFloat(num);
   chrome.action.setBadgeText({ text: "ON" });
   chrome.alarms.create(alarmBreak, {
@@ -77,7 +70,17 @@ function setWorkAlarm(num) {
   // window.close(); à remettre après les tests ( fermait la console )
 }
 
-chrome.notifications.onButtonClicked.addListener(async () => {
-  console.log("btn notif timer a été appuyé !");
-  setWorkAlarm(1);
-});
+function setBreakAlarm(n) {
+  let minutes = parseFloat(n);
+  if (n == 1) {
+    chrome.action.setBadgeText({ text: "||" });
+  } else if (n == 2) {
+    chrome.action.setBadgeText({ text: "OFF" });
+  }
+  chrome.alarms.create(alarmWork, {
+    delayInMinutes: minutes,
+  });
+  chrome.storage.sync.set({ minutes: minutes });
+}
+
+

@@ -1,8 +1,5 @@
 "use strict";
 
-const alarmBreak = "break";
-let pageToForbid = "";
-
 document
   .getElementById("startWorking")
   .addEventListener("click", sendMessageToBackground);
@@ -10,7 +7,6 @@ document
 function sendMessageToBackground() {
   chrome.runtime.sendMessage({ state: "Work" }, (response) => {
     // 3. Got an asynchronous response with the data from the service worker
-    console.log(" state: 'Work'");
   });
 }
 
