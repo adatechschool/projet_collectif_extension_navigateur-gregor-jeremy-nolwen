@@ -1,19 +1,20 @@
-# projet_collectif_extension_navigateur-gregor-jeremy-nolwen
+# Nom:
 
-## Pitch 
-## extension de navigateur de gestion de temps de travail basée sur la méthode Pomodoro.
-#### V1 : Gestion des périodes de temps + Animations pauses
-#### V2 : to do list à cocher + bann reseaux sociaux
+Tomato Timer
 
-A tester : 
-- est ce que au bout de 4 temps de travail relancer par le bouton du popup, il y a bien une pause longue ?
--est ce que au bout de 1 temps de travail lancé par le bouton popup et 3 relance par le bouton notif, il y a bien un pause longue ? 
-- est ce que au bout de 4 temsp de travail, lancé alternativement par les deux types de bouton, on a bien une longue pause ? 
-- que se passe-t'il si on rentre 1000 caractères dans l'input des tasks ? 
-- que se passe t'il s'il y a 50 taches ? 
--est ce que les mobiles.app web sont aussi empechées d'accès ? 
+## Description:
 
+Extension de navigateur sur Chrome.
+Gestion de temps de travail basé sur la méthode Pomodoro qui restreint l'accès aux réseaux sociaux lors des périodes de concentration.
+To do list intégrée dans le pop-up du navigateur.
 
-idées suite :
-- un bouton qui copie la liste de toutes les  taches restantes ( par exemple pour la sauvegarder ailleurs, dans une note, etc)
-- 
+## Lien pour installer l'extension à partir du répertoire Github:
+
+https://dev.to/ben/how-to-install-chrome-extensions-manually-from-github-1612
+
+## image de l'extension:
+
+![screenshot1](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2011-56-18.png "popup1")
+![screenshot2](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2011-59-52.png "popup2")
+![screenshot3](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2012-51-13.png "cover")
+![screenshot4](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/ReadMe/img/Screenshot%20from%202023-01-19%2013-22-52.png "notif")
