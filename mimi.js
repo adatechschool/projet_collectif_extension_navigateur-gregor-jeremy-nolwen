@@ -1,25 +1,26 @@
 function generateSTYLES() {
   return `<style>@import url(https://fonts.googleapis.com/css?family=opensans:500);
 body {
-  background: pink;
+  background: rgb(101, 101, 101);
   color: #fff;
   font-family: "Open Sans", sans-serif;
   max-height: 700px;
   overflow: hidden;
+  max-height: vw;
 }
 .c {
   text-align: center;
-  display: block;
+  display: flex ;
+  flex-direction: column ; 
   position: relative;
-  width: 80%;
-  margin: 200px auto;
+  max-width: 80%;
+  margin: 100px auto;
 }
 .STOP {
   font-size: 200px;
   position: relative;
   display: inline-block;
   z-index: 2;
-  height: 200px;
   letter-spacing: 15px;
 }
 ._1 {
@@ -34,9 +35,9 @@ body {
   text-align: center;
   display: block;
   position: relative;
-  font-size: 70px;
+  font-size: 2em;
   margin-top: 1em;
-  color: #b16f6f;
+  color: black;
 }
 
 .text {
