@@ -44,7 +44,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // 2. A page requested user data, respond with a copy of `user`
   if (message.state == "Work" && chronoStatus != alarmWork && chronoStatus != alarmBreak) {
     setWorkAlarm(1); // a changer par 25 à la fin des tests
-    return true;
   } else if (message.greeting === "get-user-data" && chronoStatus == alarmWork) {
     user = "filterON";
     sendResponse(user);
