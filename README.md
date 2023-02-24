@@ -18,9 +18,9 @@ https://dev.to/ben/how-to-install-chrome-extensions-manually-from-github-1612
 
 ## images de l'extension:
 
-![screenshot2](https://raw.githubusercontent.com/adatechschool/project_collectif_reseau_social-alice-junon-jeremy/master/resoc_n1/img/Screen1.png?token=GHSAT0AAAAAAB46ZCP2UBS4GX7SHIV7WWLGY7YUE3Q "screen1")
-![screenshot3](https://raw.githubusercontent.com/adatechschool/project_collectif_reseau_social-alice-junon-jeremy/master/resoc_n1/img/Screen2.png?token=GHSAT0AAAAAAB46ZCP2X45URXRMQUOYVX5AY7YUIMA "screen2")
-![screenshot4](https://raw.githubusercontent.com/adatechschool/project_collectif_reseau_social-alice-junon-jeremy/master/resoc_n1/img/Screen3.png?token=GHSAT0AAAAAAB46ZCP3G3R4WEIG3WWDJVLYY7YUIZQ "screen3")
+![screenshot2](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/main/img/Screenshot%20from%202023-01-19%2011-59-52.png "popup2")
+![screenshot3](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/main/img/Screenshot%20from%202023-01-19%2012-51-13.png "cover")
+![screenshot4](https://raw.githubusercontent.com/adatechschool/projet_collectif_extension_navigateur-gregor-jeremy-nolwen/main/img/Screenshot%20from%202023-01-19%2013-22-52.png "notif")
 
 ## difficultés rencontrées:
 
